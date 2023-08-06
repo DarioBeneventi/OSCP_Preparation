@@ -24,3 +24,13 @@
   ```
   sudo nmap -sUV -T4 -F --version-intensity 0 10.11.1.8
   ```
+ ### NmapAutomater
+ * Check all available parameters
+  ```
+  ./nmapAutomator.sh -h
+  ```
+* Full scan of the target 
+  ```
+  ./nmapAutomator.sh --host 10.1.1.1 --type All
+  ```
+  
