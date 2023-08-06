@@ -17,13 +17,13 @@
    nmap 10.11.1.8 -p- -sV -reason
    ```
   * Heavier scan on specific ports, -v is for verbose and -A stands for agressiive
-   ```
-   nmap 10.11.1.8 -p 21,22,80,111 -reason -v -A 
-   ```
+    ```
+    nmap 10.11.1.8 -p 21,22,80,111 -reason -v -A 
+    ```
   * UDP scan 
-   ```
-   sudo nmap -sUV -T4 -F --version-intensity 0 10.11.1.8
-   ```
+    ```
+    sudo nmap -sUV -T4 -F --version-intensity 0 10.11.1.8
+    ```
  ### NmapAutomater
  * Check all available parameters
    ```
