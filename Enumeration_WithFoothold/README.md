@@ -28,7 +28,7 @@
    ```
    systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
    ```
-  * Linux
+ * Linux
    ```
    cat /etc/issue
    cat /etc/*-release
