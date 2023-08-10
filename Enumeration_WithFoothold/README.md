@@ -64,3 +64,36 @@
    ```
    find / -perm -u=s -type f 2>/dev/null
    ```
+### Firewall status & rules - Windows
+ * 
+   ```
+   netsh advfirewall show currentprofile
+   netsh advfirewall firewall show rule name=all
+   ```
+### Firewall status & rules - Linux
+ * 
+   ```
+   etc/iptables
+   ```
+### Scheduled tasks - Windows
+ * 
+   ```
+   schtasks /query /fo LIST /v
+   ```
+### Scheduled tasks - Linux
+ * 
+   ```
+   ls -lah /etc/cron*
+   cat /etc/crontab
+   ```
+### Installed apps & patch levels - Windows
+ * 
+   ```
+   wmic product get name, version, vendor
+   wmic qfe get Caption, Description, HotFixID, InstalledOn
+   ```
+### Installed apps & patch levels - Linux
+ * 
+   ```
+   dpkg –l
+   ```
