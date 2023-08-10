@@ -1,6 +1,6 @@
 # Enumeration_NoFoothold
 
-This part contains the manual enumeration when we have no initial foothold into any of our target hosts.
+This part contains the manual enumeration commands when we have no initial foothold into any of our target hosts.
 
  ### Nmap 
 
