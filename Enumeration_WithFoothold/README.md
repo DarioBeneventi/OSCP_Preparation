@@ -23,77 +23,71 @@
    ```
    hostname
    ```
-### Operating System Version and Architecture - Windows
- * 
+### Operating System Version and Architecture
+ * Windows
    ```
    systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
    ```
-### Operating System Version and Architecture - Linux
- * 
+  * Linux
    ```
    cat /etc/issue
    cat /etc/*-release
    uname -a
    ```
-### Running processes & services - Windows
- * 
+### Running processes & services 
+ * Windows
    ```
    tasklist /SVC
    ```
-### Running processes & services - Linux
- * 
+ * Linux
    ```
    ps axu
    ```
-### Network info - Windows
- * 
+### Network info
+ * Windows
    ```
    ipconfig /all
    route print
    netstat –ano 
    ```
-### Network info - Linux
- * 
+ * Linux
    ```
    ip a 
    /sbin/route 
    ss –anp  
    ```
-### Search for all SUID/SGID files - Linux
+### Search for all SUID/SGID files (Linux)
  * Enumerate all binaries having SUID permission
    ```
    find / -perm -u=s -type f 2>/dev/null
    ```
-### Firewall status & rules - Windows
- * 
+### Firewall status & rules
+ * Windows
    ```
    netsh advfirewall show currentprofile
    netsh advfirewall firewall show rule name=all
    ```
-### Firewall status & rules - Linux
- * 
+ * Linux
    ```
    etc/iptables
    ```
-### Scheduled tasks - Windows
- * 
+### Scheduled tasks
+ * Windows
    ```
    schtasks /query /fo LIST /v
    ```
-### Scheduled tasks - Linux
- * 
+ * Linux
    ```
    ls -lah /etc/cron*
    cat /etc/crontab
    ```
-### Installed apps & patch levels - Windows
- * 
+### Installed apps & patch levels
+ * Windows
    ```
    wmic product get name, version, vendor
    wmic qfe get Caption, Description, HotFixID, InstalledOn
    ```
-### Installed apps & patch levels - Linux
- * 
+ * Linux
    ```
    dpkg –l
    ```
