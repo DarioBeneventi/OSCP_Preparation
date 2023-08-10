@@ -3,8 +3,6 @@
 **This repository is my attempt to migrate all my OSCP notes from Microsoft OneNote to Github for easy accessibility during pentests and eventually sharing this with the community.**
 
 **Work in progress**
- * 06/08/23 - Added nmap & a part of nmapAutomater
- * 
 
 ## Enumeration_NoFoothold
  ### Nmap 
