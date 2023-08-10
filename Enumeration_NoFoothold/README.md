@@ -1,10 +1,7 @@
-# OSCP_Preparation
+# Enumeration_NoFoothold
 
-**This repository is my attempt to migrate all my OSCP notes from Microsoft OneNote to Github for easy accessibility during pentests and eventually sharing this with the community.**
+This part contains the manual enumeration when we have no initial foothold into any of our target hosts.
 
-**Work in progress**
-
-## Enumeration_NoFoothold
  ### Nmap 
 
  * Quick scan to find running hosts
