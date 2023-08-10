@@ -16,7 +16,7 @@
    ```
    nmap 10.11.1.8 -p- -sV -reason
    ```
-  * Heavier scan on specific ports, -v is for verbose and -A stands for agressiive
+  * Heavier scan on specific ports, -v is for verbose and -A stands for agressive
     ```
     nmap 10.11.1.8 -p 21,22,80,111 -reason -v -A 
     ```
