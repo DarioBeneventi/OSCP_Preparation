@@ -1,72 +1,66 @@
-# OSCP_Preparation
+# Enumeration_NoFoothold
 
-**This repository is my attempt to migrate all my OSCP notes from Microsoft OneNote to Github for easy accessibility during pentests and eventually sharing this with the community.**
+ ### Windows User
 
-**Work in progress**
-
-## Enumeration_NoFoothold
- ### Nmap 
-
- * Quick scan to find running hosts
+ * Display your login name
    ```
-   nmap 10.11.1.0/24 -sn 
+   whoami
    ```
- * Light scan on top 100 ports
+ * Display user account information
    ```
-   nmap 10.11.1.8 --top-ports 100 -open
+   net user student
    ```
- * Heavy scan on all ports, -sV stands for service detection & --reason will make Nmap include the packet type that determined the port and host state
+ ### Linux User
+ * Basic Linux command used to confirm the identity of a specified Linux user
    ```
-   nmap 10.11.1.8 -p- -sV -reason
+   id
    ```
-  * Heavier scan on specific ports, -v is for verbose and -A stands for agressiive
-    ```
-    nmap 10.11.1.8 -p 21,22,80,111 -reason -v -A 
-    ```
-  * UDP scan 
-    ```
-    sudo nmap -sUV -T4 -F --version-intensity 0 10.11.1.8
-    ```
- ### NmapAutomater
- * Check all available parameters
+ * Plain text file containing list of system's accounts & sometimes encrypted password
    ```
-   ./nmapAutomator.sh -h
+   cat /etc/passwd 
    ```
- * Full scan of the target 
+ * Name given to a computer and attachment to the network
    ```
-   ./nmapAutomator.sh --host 10.1.1.1 --type All
+   hostname
    ```
-### Nikto
- * Scan a web server
+### Operating System Version and Architecture - Windows
+ * 
    ```
-   nikto -host http://10.11.1.71 -output Desktop/OSCP/Labs/71/71_niktoscan.txt 
+   systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type"
    ```
-### GoBuster
- * Enumerate a web server for known directories
+### Operating System Version and Architecture - Linux
+ * 
    ```
-   gobuster dir -u http://10.10.1.218 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt  
+   cat /etc/issue
+   cat /etc/*-release
+   uname -a
    ```
-### SMB enumeration
- * SMB shares
+### Running processes & services - Windows
+ * 
    ```
-   nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.18.26
-   Smbmap –H 10.10.70.166 
+   tasklist /SVC
    ```
- * Inspect/connect to found SMB shares
+### Running processes & services - Linux
+ * 
    ```
-   smbclient //10.10.18.26/sharefoundinpreviouscommand
+   ps axu
    ```
- * Download SMB share
+### Network info - Windows
+ * 
    ```
-   smbget -R smb://10.10.44.179/sharefoundinpreviouscommand
+   ipconfig /all
+   route print
+   netstat –ano 
    ```
-### Netcat
- * Connect to FTP using nc - can give us info on what service & version ftp is running
+### Network info - Linux
+ * 
    ```
-   Nc 10.10.4.226 21
+   ip a 
+   /sbin/route 
+   ss –anp  
    ```
-### NFS Share
- * Check what mounts we can see
+### Search for all SUID/SGID files - Linux
+ * Enumerate all binaries having SUID permission
    ```
-   nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.91.51
+   find / -perm -u=s -type f 2>/dev/null
    ```
