@@ -1,5 +1,7 @@
 # Enumeration_WithFoothold
 
+**This part contains the manual enumeration commands when we DO have a initial foothold into any of our target hosts.**
+
  ### Windows User
 
  * Display your login name
