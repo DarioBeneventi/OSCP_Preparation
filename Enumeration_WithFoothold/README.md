@@ -36,7 +36,7 @@
    cat /etc/*-release
    uname -a
    ```
-### Running processes & services 
+### Check running processes & services 
  * Windows
    ```
    tasklist /SVC
