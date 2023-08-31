@@ -1,6 +1,6 @@
 # Enumeration_By_Port_Number
 
-**This part contains manual enumeration methods for specific port numbers that we encounter on a Pentest, be aware that automated tools are not allowed on the OSCP exam**
+**This part contains manual enumeration methods for specific port numbers that we encounter on a Pentest, be aware that automated tools are not allowed on the OSCP exam.**
 
  ### PORT 21 - FTP
 
