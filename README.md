@@ -6,3 +6,4 @@
 
 1. [Enumeration_NoFoothold](https://github.com/DarioBeneventi/OSCP_Preparation/blob/main/Enumeration_NoFoothold/README.md)
 2. [Enumeration_WithFoothold](https://github.com/DarioBeneventi/OSCP_Preparation/blob/main/Enumeration_WithFoothold/README.md)
+3. [Enumeration_WithFoothold](https://github.com/DarioBeneventi/OSCP_Preparation/blob/main/Enumeration_By_Port_Number/README.md)
